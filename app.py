@@ -3,19 +3,15 @@ from flask import Flask, render_template, request, redirect
 app = Flask(__name__)
 
 
-@app.route("/", methods=["GET", "POST"])
+@app.route("/")
 def index():
-    if request.method == "POST":
-        text = request.form["Text"]
-        print(text)
-        return redirect(url_for(wbw, text=text))
     return render_template("index.html")
 
 
 
-@app.route("/wordbyword/", methods=["GET", "POST"])
+@app.route("/wordbyword/")
 def wbw():
-    return "Hi"
+    return render_template("wordbyword.html")
 
 
 
