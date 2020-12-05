@@ -5,5 +5,25 @@
 {% endblock %}
 
 {% block body %}
-    <p>This is the page</p>
+    <br><br>
+    <h1 class="movecenter">Online Speed Reading Tool</h1>
+    <br><br>
+    <div id="how-to" class="alert alert-primary" role="alert">
+        <h5>How it works: </h5>
+        <ol>
+            <li><b>Copy</b> the text you want to read</li>
+            <li><b>Paste</b> the text in the box below</li>
+            <li><b>Select</b> your desired speed</li>
+            <li><b>Press</b> "Start"</li>
+        </ol>
+    </div>
+    <br><br>
+
+    <form action="/wordbyword/" method="POST" id="textinput">
+        <textarea name="Text" id="usertext" cols="120" rows="10">Paste or type your text here</textarea>
+        <br>
+        <input type="submit" class="btn btn-primary" value="Start">
+
+    </form>
+
 {% endblock %}

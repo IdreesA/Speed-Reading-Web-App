@@ -1,4 +1,25 @@
 body{
     margin: 0;
-    font-family: sans-serif;
+    font-weight: 400;
+	font-family: Roboto;
+}
+
+textarea {
+  resize: none;
+}
+
+.movecenter{
+    text-align: center;
+}
+
+
+#how-to{
+    margin-left: 30%;
+    margin-right: 30%;
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+#textinput{
+    text-align: center;
 }
