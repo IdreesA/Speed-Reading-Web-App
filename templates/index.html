@@ -19,11 +19,20 @@
     </div>
     <br><br>
 
-    <form id="textinput">
+    <div id="textinput">
         <textarea name="Text" id="usertext" cols="120" rows="10">Paste or type your text here</textarea>
         <br>
-        <input type="submit" class="btn btn-primary" value="Start">
+        <button id="btnstart" onclick="textrun()" class="btn btn-primary">Start</button>
+        <button id="btnend" onclick="textpause()" class="btn btn-primary">Pause</button>
+        <br><label for="Speed">Words per minute: </label><input type="text" id="Speed" maxlength="4" size="4">
 
-    </form>
+        <br><br><br>
+
+        <div id="how-to" class="alert alert-primary" role="alert">
+            <h2 id="interval-text">Text</h2><!--You can put this in an alert-->
+        </div>
+    </div>
+
+
 
 {% endblock %}
