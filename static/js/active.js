@@ -16,12 +16,23 @@ function textrun() //link your start button to this
 
     textlength = list.length; //gets the length of the list
     countcheck = textlength - 1;
+    speedget = document.getElementById("Speed").value; //tt
+    speedget = Number(speedget); //tt
+    speed = (60/speedget) * 1000; //tt
+
     
 
     intervalID = setInterval(function (){
-        intervaltext.innerHTML = "<h1>" + list[count] + "</h1>";
+
+        if (count >= textlength)
+        {
+            intervaltext.innerHTML = "<h1>" + "[Text Complete]" + "</h1>";
+        }
+        else{
+            intervaltext.innerHTML = "<h1>" + list[count] + "</h1>";
+        }
         count += 1;
-    }, 150);
+    }, speed); //tt added speed variable instead of number
     
 }
 
@@ -29,4 +40,8 @@ function textrun() //link your start button to this
 function textpause () //link your pause button to this
 {
     clearInterval(intervalID);
+}
+
+function textreset () {
+    count = 0;
 }
