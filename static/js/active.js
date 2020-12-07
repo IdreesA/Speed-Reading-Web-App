@@ -1,24 +1,24 @@
 
 
-let list; //initializes list so that it can be accessed in function
-let intervalID; // sets intervalID as a global variable so that it can be accessed in functions
-let count = 0; // for indexing the list
+let list;
+let intervalID;
+let count = 0;
 
 
 
 
-function textrun() //link your start button to this
+function textrun()
 {
-    let usertext = document.getElementById("usertext").value; //use this to get the text the user entered
+    let usertext = document.getElementById("usertext").value;
     list = usertext.split(" ");
 
-    let intervaltext = document.getElementById("interval-text"); //replace this with the ID of the area you want the speedreading to happen
+    let intervaltext = document.getElementById("interval-text");
 
-    textlength = list.length; //gets the length of the list
+    textlength = list.length;
     countcheck = textlength - 1;
-    speedget = document.getElementById("Speed").value; //tt
-    speedget = Number(speedget); //tt
-    speed = (60/speedget) * 1000; //tt
+    speedget = document.getElementById("Speed").value;
+    speedget = Number(speedget);
+    speed = (60/speedget) * 1000;
 
     
 
@@ -32,12 +32,12 @@ function textrun() //link your start button to this
             intervaltext.innerHTML = "<h1>" + list[count] + "</h1>";
         }
         count += 1;
-    }, speed); //tt added speed variable instead of number
+    }, speed);
     
 }
 
 
-function textpause () //link your pause button to this
+function textpause ()
 {
     clearInterval(intervalID);
 }
